@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+
+<?php
+// ridelink.php
+
+require __DIR__.'/../vendor/autoload.php';
+
+use Ridelink\Console\Command\Question1Command;
+use Ridelink\Console\Command\Question2Command;
+use Ridelink\Console\Command\Question3Command;
+use Ridelink\Console\Command\Question4Command;
+use Ridelink\Console\Command\Question5Command;
+use Ridelink\Console\Command\Question6Command;
+use Ridelink\Console\Command\Question7Command;
+use Ridelink\Console\Command\Question8Command;
+use Symfony\Component\Console\Application;
+
+$application = new Application('Ridelink', '1.0.0');
+$application->add(new Question1Command());
+$application->add(new Question2Command());
+$application->add(new Question3Command());
+$application->add(new Question4Command());
+$application->add(new Question5Command());
+$application->add(new Question6Command());
+$application->add(new Question7Command());
+$application->add(new Question8Command());
+$application->run();
